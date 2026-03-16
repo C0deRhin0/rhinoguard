@@ -1,0 +1,22 @@
+services:
+  rhinoguard:
+    build: .
+    environment:
+      RHINOGUARD_SCENARIO_DIR: /app/scenarios
+      RHINOGUARD_POLICY_FILE: /app/policies/default.yaml
+      RHINOGUARD_REPORT_DIR: /tmp/rhinoguard-reports
+    ports:
+      - "127.0.0.1:8080:8080"
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/healthz', timeout=2)"]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+
