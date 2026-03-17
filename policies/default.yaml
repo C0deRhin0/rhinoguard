@@ -1,0 +1,45 @@
+version: 1
+name: RhinoGuard default least-privilege policy
+defaults:
+  effect: allow
+  max_tool_calls: 8
+rules:
+  - id: RG-DENY-SENSITIVE-READ
+    reason: sensitive synthetic files require explicit human approval
+    tools: [read_file]
+    when:
+      path_matches:
+        - "secrets/*"
+        - "credentials/*"
+        - "private/*"
+
+  - id: RG-DENY-EXTERNAL-MAIL
+    reason: untrusted external email destination is blocked
+    tools: [send_email]
+    when:
+      destination_domains: [evil.example, attacker.invalid]
+
+  - id: RG-DENY-SECRET-IN-OUTPUT
+    reason: tool arguments contain a registered synthetic secret
+    tools: [send_email, http_request, write_file]
+    when:
+      arguments_contain_secret: true
+
+  - id: RG-DENY-UNTRUSTED-HTTP
+    reason: synthetic HTTP destination is outside the allowlist
+    tools: [http_request]
+    when:
+      url_host_not_in: [api.internal.test, status.internal.test]
+
+  - id: RG-DENY-UNTRUSTED-MEMORY
+    reason: external instructions cannot be persisted to agent memory
+    tools: [memory_write]
+    when:
+      untrusted_memory_write: true
+
+  - id: RG-RESTRICT-SHELL
+    reason: command is outside the synthetic shell allowlist
+    tools: [shell]
+    when:
+      command_not_in: [pwd, ls, search]
+
