@@ -1,0 +1,7 @@
+version: 1
+name: Explicitly permissive demonstration policy
+defaults:
+  effect: allow
+  max_tool_calls: 20
+rules: []
+
