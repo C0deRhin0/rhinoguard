@@ -18,3 +18,4 @@ jobs:
           context: .
           push: false
           tags: rhinoguard:test
+# Capture a cleanup item for container
