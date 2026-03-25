@@ -21,3 +21,4 @@ api:
 clean:
 	python -c "import shutil; [shutil.rmtree(p, ignore_errors=True) for p in ('reports', '.pytest_cache', '.ruff_cache', 'htmlcov', 'dist', 'build')]"
 
+# Capture a cleanup item for makefile
