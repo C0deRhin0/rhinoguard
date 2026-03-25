@@ -252,3 +252,4 @@ See the detailed [Roadmap](docs/roadmap.md).
 ## License
 
 [MIT](LICENSE) © 2026 Wilfredo Paulo A. Perez III.
+<!-- Refine the surrounding context for project documentation -->
