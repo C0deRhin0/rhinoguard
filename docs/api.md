@@ -28,3 +28,4 @@ The response is the recursively redacted run payload.
 The API is designed for local automation. It does not provide authentication,
 multi-tenancy, job queues, or arbitrary filesystem scenario selection.
 
+<!-- Clarify implementation notes for api documentation -->
