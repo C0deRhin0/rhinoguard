@@ -34,3 +34,4 @@ language. Policy rules depend on accurate data classification. A real provider
 may return malformed output or expose prompts to its configured service. HTML
 reports are escaped and redacted, but should still be treated as security data.
 
+<!-- Align local documentation for threat model documentation -->
