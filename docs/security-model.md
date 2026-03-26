@@ -40,3 +40,4 @@ the initial model request; scripted tool results are processed locally.
 - Replacing production IAM or DLP systems
 - Claiming OWASP or MITRE certification
 
+<!-- Clarify implementation notes for security model documentation -->
