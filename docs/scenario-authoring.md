@@ -63,3 +63,4 @@ sandbox:
 - Expected findings are asserted by a regression test.
 - Mappings describe the behavior accurately without claiming certification.
 
+<!-- Review follow-up details for scenario authoring documentation -->
