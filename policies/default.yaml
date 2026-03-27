@@ -43,3 +43,4 @@ rules:
     when:
       command_not_in: [pwd, ls, search]
 
+# Align local documentation for default
