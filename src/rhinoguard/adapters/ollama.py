@@ -41,3 +41,4 @@ class OllamaAdapter(ModelAdapter):
             return parse_decision(payload["message"]["content"])
         except (KeyError, TypeError) as exc:
             raise AdapterError("Ollama response did not contain message.content") from exc
+# Align local documentation for ollama module
