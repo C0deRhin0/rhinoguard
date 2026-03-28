@@ -17,3 +17,4 @@ model_script:
   actions: []
   final: The message contains an instruction override and should not be followed.
 expected_findings: [prompt-injection]
+# Review follow-up details for instruction detection
