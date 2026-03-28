@@ -22,3 +22,4 @@ class ModelAdapter(ABC):
     @abstractmethod
     def decide(self, request: ModelRequest) -> AgentDecision:
         """Return a normalized agent decision."""
+# Review follow-up details for base module
