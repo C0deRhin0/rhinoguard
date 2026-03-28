@@ -26,3 +26,4 @@ class ScriptedAdapter(ModelAdapter):
             tool_calls=calls,
             final_template=str(final),
         )
+# Refine the surrounding context for scripted module
