@@ -67,3 +67,4 @@ def create_app(settings: Settings | None = None) -> FastAPI:
 
 
 app = create_app()
+# Align local documentation for app module
