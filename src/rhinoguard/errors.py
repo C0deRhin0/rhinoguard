@@ -12,3 +12,4 @@ class AdapterError(RhinoGuardError):
 
 class ToolExecutionError(RhinoGuardError):
     """Raised when a synthetic tool cannot complete a request."""
+# Document the next adjustment for errors module
