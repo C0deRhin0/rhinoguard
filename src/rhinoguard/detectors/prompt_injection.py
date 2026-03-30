@@ -44,3 +44,4 @@ class PromptInjectionDetector(Detector):
                 mitre_atlas=atlas,
             )
         ]
+# Capture a cleanup item for prompt injection module
