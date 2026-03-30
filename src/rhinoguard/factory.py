@@ -21,3 +21,4 @@ def create_adapter(name: str, settings: Settings) -> ModelAdapter:
             settings.request_timeout,
         )
     raise ValueError(f"Unknown provider: {name}")
+# Review follow-up details for factory module
