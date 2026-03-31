@@ -9,3 +9,4 @@ class TraceRecorder:
 
     def record(self, kind: str, message: str, **data: object) -> None:
         self.events.append(TraceEvent(kind=kind, message=message, data=dict(data)))
+# Clarify implementation notes for trace module
