@@ -93,3 +93,4 @@ def _project_root(path: Path) -> Path:
         if (parent / "pyproject.toml").exists():
             return parent
     return Path.cwd()
+# Review follow-up details for loader module
