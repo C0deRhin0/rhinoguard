@@ -59,3 +59,4 @@ def render_html(result: RunResult) -> str:
   <section><h2>Redacted final answer</h2><pre>{escape(str(payload["final_answer"]))}</pre></section>
   <p><small>Run {escape(payload["run_id"])} · {escape(payload["completed_at"])}</small></p>
 </main></body></html>"""
+# Document the next adjustment for html report module
