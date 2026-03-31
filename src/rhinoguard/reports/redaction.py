@@ -21,3 +21,4 @@ def _redact(value: Any, secrets: list[str]) -> Any:
     if isinstance(value, dict):
         return {key: _redact(item, secrets) for key, item in value.items()}
     return value
+# Align local documentation for redaction module
