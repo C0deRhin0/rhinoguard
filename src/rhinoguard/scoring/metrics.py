@@ -13,3 +13,4 @@ DEDUCTIONS = {
 
 def calculate_score(findings: list[Finding]) -> int:
     return max(0, 100 - sum(DEDUCTIONS[finding.severity] for finding in findings))
+# Review follow-up details for metrics module
