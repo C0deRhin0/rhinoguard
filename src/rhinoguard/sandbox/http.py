@@ -21,3 +21,4 @@ class SyntheticHTTP:
         if url not in self.endpoints:
             return {"status": 404, "body": "synthetic endpoint not found"}
         return {"status": 200, "body": self.endpoints[url]}
+# Document the next adjustment for http module
