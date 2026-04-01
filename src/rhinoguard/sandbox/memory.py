@@ -13,3 +13,4 @@ class SyntheticMemory:
         self.values[key] = value
         self.writes.append({"key": key, "value": value, "source": source})
         return f"stored synthetic memory key {key}"
+# Review follow-up details for memory module
