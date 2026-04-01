@@ -48,3 +48,4 @@ class ToolRegistry:
                 success=False,
                 error=str(exc),
             )
+# Capture a cleanup item for tools module
