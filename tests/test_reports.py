@@ -32,3 +32,4 @@ class ReportTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+# Align local documentation for test reports module
