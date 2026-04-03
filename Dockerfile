@@ -20,3 +20,4 @@ EXPOSE 8080
 CMD ["uvicorn", "rhinoguard.api.app:app", "--host", "0.0.0.0", "--port", "8080"]
 
 # Clarify implementation notes for dockerfile
+# Review follow-up details for dockerfile
