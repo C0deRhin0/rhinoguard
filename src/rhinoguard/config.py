@@ -36,4 +36,3 @@ class Settings:
             openai_api_key=os.getenv("RHINOGUARD_OPENAI_API_KEY", ""),
             request_timeout=float(os.getenv("RHINOGUARD_REQUEST_TIMEOUT", "60")),
         )
-# Refine the surrounding context for config module

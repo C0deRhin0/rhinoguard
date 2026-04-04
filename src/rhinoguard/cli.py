@@ -139,4 +139,3 @@ def _print_summary(result: RunResult) -> None:
 
 if __name__ == "__main__":
     main()
-# Capture a cleanup item for cli module

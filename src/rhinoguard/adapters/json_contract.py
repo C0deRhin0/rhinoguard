@@ -45,4 +45,3 @@ def parse_decision(text: str) -> AgentDecision:
             )
         )
     return AgentDecision(tool_calls=calls, final_template=str(payload.get("final", "")))
-# Clarify implementation notes for json contract module

@@ -10,4 +10,3 @@ POLICY_FILE = PROJECT_ROOT / "policies" / "default.yaml"
 
 def scripted_runner() -> Runner:
     return Runner(ScriptedAdapter(), POLICY_FILE)
-# Align local documentation for helpers module

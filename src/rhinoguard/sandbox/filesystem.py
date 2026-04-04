@@ -42,4 +42,3 @@ class VirtualFilesystem:
             for path, content in self._files.items()
             if needle in path.casefold() or needle in content.casefold()
         )
-# Refine the surrounding context for filesystem module

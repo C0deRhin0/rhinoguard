@@ -27,4 +27,3 @@ def framework(context: DetectionContext) -> tuple[list[str], list[str]]:
         list(context.scenario.framework.get("owasp", [])),
         list(context.scenario.framework.get("mitre_atlas", [])),
     )
-# Review follow-up details for base module

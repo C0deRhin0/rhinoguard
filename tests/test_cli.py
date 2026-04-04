@@ -32,4 +32,3 @@ class CLITests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-# Document the next adjustment for test cli module

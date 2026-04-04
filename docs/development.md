@@ -30,5 +30,3 @@ integration.
 - Prefer stable scenario IDs and small, reviewable fixtures.
 - Add tests for every policy condition and output format.
 
-<!-- Capture a cleanup item for development documentation -->
-<!-- Align local documentation for development documentation -->

@@ -28,4 +28,3 @@ class ScenarioLoaderTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-# Review follow-up details for test loader module

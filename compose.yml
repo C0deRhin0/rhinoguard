@@ -20,5 +20,3 @@ services:
       timeout: 3s
       retries: 3
 
-# Review follow-up details for compose
-# Document the next adjustment for compose

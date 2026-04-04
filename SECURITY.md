@@ -26,5 +26,3 @@ proof of concept when possible.
 - Reports redact registered synthetic secret values.
 - Real-provider credentials are read only from environment variables.
 
-<!-- Document the next adjustment for security documentation -->
-<!-- Refine the surrounding context for security documentation -->

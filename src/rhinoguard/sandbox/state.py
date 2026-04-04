@@ -33,4 +33,3 @@ class Sandbox:
             shell=SyntheticShell(filesystem),
             secrets=secrets,
         )
-# Align local documentation for state module

@@ -131,4 +131,3 @@ class ToolUsingAgent:
         if not result.success:
             return f"[tool error: {result.error}]"
         return str(result.output)
-# Review follow-up details for tool agent module

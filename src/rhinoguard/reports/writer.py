@@ -21,4 +21,3 @@ def write_reports(result: RunResult, directory: str | Path) -> dict[str, Path]:
     paths["markdown"].write_text(render_markdown(result), encoding="utf-8")
     paths["html"].write_text(render_html(result), encoding="utf-8")
     return paths
-# Capture a cleanup item for writer module

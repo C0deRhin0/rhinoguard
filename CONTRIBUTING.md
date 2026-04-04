@@ -11,5 +11,3 @@ Scenario contributions should contain a clear objective, a bounded synthetic
 attack, expected findings, and remediation guidance. Never submit real secrets
 or payloads intended for unauthorized targets.
 
-<!-- Review follow-up details for contributing documentation -->
-<!-- Document the next adjustment for contributing documentation -->

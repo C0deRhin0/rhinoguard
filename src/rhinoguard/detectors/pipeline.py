@@ -32,4 +32,3 @@ def _severity_rank(severity: object) -> int:
     return {"info": 0, "low": 1, "medium": 2, "high": 3, "critical": 4}.get(
         getattr(severity, "value", str(severity)), 0
     )
-# Align local documentation for pipeline module

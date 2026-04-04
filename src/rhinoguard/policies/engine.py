@@ -102,4 +102,3 @@ class PolicyEngine:
             if operation in {str(item) for item in command_not_in}:
                 return False
         return True
-# Capture a cleanup item for engine module

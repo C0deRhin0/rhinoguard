@@ -110,4 +110,3 @@ class RunResult:
                 else finding["severity"]
             )
         return payload
-# Clarify implementation notes for models module

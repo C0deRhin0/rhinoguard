@@ -44,4 +44,3 @@ def render_markdown(result: RunResult) -> str:
         lines.append(f"- `{tool_result['call_id']}` / `{tool_result['tool']}`: **{state}**")
     lines.extend(["", "## Redacted Final Answer", "", str(payload["final_answer"]), ""])
     return "\n".join(lines)
-# Clarify implementation notes for markdown report module

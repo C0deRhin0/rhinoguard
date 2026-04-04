@@ -10,4 +10,3 @@ __all__ = [
     "OpenAICompatibleAdapter",
     "ScriptedAdapter",
 ]
-# Document the next adjustment for init module

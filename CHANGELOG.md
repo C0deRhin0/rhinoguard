@@ -15,5 +15,3 @@ All notable changes will be documented here.
 - JSON, Markdown, and standalone HTML reports with secret redaction.
 - CLI, local FastAPI surface, container configuration, and regression tests.
 
-<!-- Document the next adjustment for changelog documentation -->
-<!-- Refine the surrounding context for changelog documentation -->

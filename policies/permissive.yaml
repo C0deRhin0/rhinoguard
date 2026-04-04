@@ -5,4 +5,3 @@ defaults:
   max_tool_calls: 20
 rules: []
 
-# Capture a cleanup item for permissive

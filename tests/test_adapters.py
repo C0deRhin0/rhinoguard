@@ -23,4 +23,3 @@ class AdapterContractTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-# Capture a cleanup item for test adapters module

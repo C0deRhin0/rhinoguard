@@ -40,4 +40,3 @@ class OpenAICompatibleAdapter(ModelAdapter):
             return parse_decision(payload["choices"][0]["message"]["content"])
         except (KeyError, IndexError, TypeError) as exc:
             raise AdapterError("Response did not contain choices[0].message.content") from exc
-# Capture a cleanup item for openai compatible module

@@ -51,4 +51,3 @@ select = ["E", "F", "I", "B", "UP", "SIM"]
 
 [tool.ruff.lint.per-file-ignores]
 "src/rhinoguard/reports/html_report.py" = ["E501"]
-# Refine the surrounding context for pyproject

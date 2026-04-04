@@ -89,4 +89,3 @@ class BehaviorDetector(Detector):
                 mitre_atlas=atlas,
             )
         ]
-# Clarify implementation notes for behavior module

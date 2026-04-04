@@ -29,4 +29,3 @@ class SyntheticShell:
         if operation == "search" and arguments:
             return "\n".join(self.filesystem.search(" ".join(arguments)))
         raise ToolExecutionError(f"Command is not supported by the synthetic shell: {operation}")
-# Clarify implementation notes for shell module

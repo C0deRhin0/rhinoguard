@@ -19,5 +19,3 @@ RhinoGuard scenario metadata references relevant identifiers from the OWASP Top
 Mappings provide navigation and reporting context. Framework owners may revise
 identifiers or descriptions; verify mappings during each RhinoGuard release.
 
-<!-- Refine the surrounding context for framework mapping documentation -->
-<!-- Capture a cleanup item for framework mapping documentation -->

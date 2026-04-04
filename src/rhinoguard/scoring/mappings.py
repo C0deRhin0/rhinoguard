@@ -14,4 +14,3 @@ FRAMEWORK_LABELS = {
 
 def label(identifier: str) -> str:
     return FRAMEWORK_LABELS.get(identifier, identifier)
-# Document the next adjustment for mappings module

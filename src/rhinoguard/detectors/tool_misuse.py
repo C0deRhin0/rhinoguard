@@ -29,4 +29,3 @@ class ToolMisuseDetector(Detector):
                 mitre_atlas=atlas,
             )
         ]
-# Refine the surrounding context for tool misuse module
