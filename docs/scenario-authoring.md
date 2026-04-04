@@ -64,3 +64,4 @@ sandbox:
 - Mappings describe the behavior accurately without claiming certification.
 
 <!-- Review follow-up details for scenario authoring documentation -->
+<!-- Document the next adjustment for scenario authoring documentation -->
