@@ -27,3 +27,4 @@ proof of concept when possible.
 - Real-provider credentials are read only from environment variables.
 
 <!-- Document the next adjustment for security documentation -->
+<!-- Refine the surrounding context for security documentation -->
