@@ -52,3 +52,4 @@ to disk. Generated reports contain a serialized scenario and trace, but every
 registered synthetic secret is replaced recursively before serialization.
 
 <!-- Align local documentation for architecture documentation -->
+<!-- Clarify implementation notes for architecture documentation -->
