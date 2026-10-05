@@ -1,0 +1,40 @@
+name: Regression Gate
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  evaluate:
+    name: Release readiness
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      RHINOGUARD_PROVIDER: scripted
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install project and pinned gate
+        run: |
+          python -m pip install -e '.[dev]'
+          python -m pip install 'ai-regression-gate @ git+https://github.com/C0deRhin0/ai-regression-gate.git@c49f48a7d646c7f6ae2b4e934fac95034df1e100'
+      - run: argate config validate
+      - name: Evaluate PR head against target
+        env:
+          ARGATE_BASE: ${{ github.event.pull_request.base.sha }}
+          ARGATE_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: argate evaluate --base "$ARGATE_BASE" --head "$ARGATE_HEAD" --no-ai --report-dir reports/argate
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: regression-gate-reports
+          path: reports/argate/
+          if-no-files-found: warn
