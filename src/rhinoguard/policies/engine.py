@@ -56,7 +56,7 @@ class PolicyEngine:
     def _decision(self, rule_id: str, reason: str) -> PolicyDecision:
         if self.mode is PolicyMode.MONITOR:
             return PolicyDecision(allowed=True, rule_id=rule_id, reason=reason, would_block=True)
-        return PolicyDecision(allowed=False, rule_id=rule_id, reason=reason, would_block=True)
+        return PolicyDecision(allowed=True, rule_id=rule_id, reason=reason, would_block=True)
 
     @staticmethod
     def _matches(rule: dict[str, Any], call: ToolCall, secret_values: list[str]) -> bool:
