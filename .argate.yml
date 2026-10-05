@@ -1,0 +1,52 @@
+project:
+  name: rhinoguard
+components:
+  application:
+    paths: ["src/rhinoguard/**", "tests/**"]
+    tests: [unit, security-regression]
+  security-corpus:
+    paths: ["policies/**", "scenarios/**", "fixtures/**"]
+    tests: [unit, security-regression, corpus-validation]
+  build-ci:
+    paths: [".github/**", "Dockerfile", "compose.yml", "pyproject.toml", "Makefile", ".argate.yml"]
+    tests: [unit, lint]
+test_groups:
+  unit:
+    command: "python -m pytest tests --cov=rhinoguard --cov-report=xml:reports/argate/coverage.xml -q"
+    required: true
+    timeout_seconds: 120
+  security-regression:
+    command: "python -m pytest tests/test_policy.py tests/test_sandbox.py tests/test_runner.py tests/test_reports.py -q"
+    required: true
+    timeout_seconds: 60
+  corpus-validation:
+    command: "python -m rhinoguard validate"
+    required: true
+    timeout_seconds: 30
+  lint:
+    command: "python -m ruff check src tests"
+    required: true
+    timeout_seconds: 60
+risk_rules:
+  - paths: ["src/rhinoguard/policies/**", "src/rhinoguard/sandbox/**", "src/rhinoguard/agent/**", "src/rhinoguard/adapters/**", "src/rhinoguard/detectors/**", "src/rhinoguard/reports/**", "policies/**", "scenarios/**", "fixtures/**"]
+    severity: high
+    category: security-boundary
+    description: "Changes can affect policy enforcement, synthetic isolation, attack detection, or secret redaction."
+    suggested_test: "Run the full suite and explicit security regressions."
+  - paths: [".github/**", ".argate.yml", "pyproject.toml", "Dockerfile", "compose.yml"]
+    severity: high
+    category: build-policy
+    description: "Changes can affect dependency installation or required release checks."
+    suggested_test: "Run the full suite and lint checks."
+coverage:
+  enabled: true
+  format: cobertura
+  path: reports/argate/coverage.xml
+  minimum: 80
+quality_gates:
+  require_all_required_tests: true
+  block_on_high_risk_without_tests: true
+ai:
+  mode: deterministic_only
+security:
+  sensitive_paths: ["fixtures/**", "scenarios/**"]
