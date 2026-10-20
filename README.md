@@ -274,3 +274,13 @@ See the detailed [Roadmap](docs/roadmap.md).
 ## License
 
 [MIT](LICENSE) © 2026 Wilfredo Paulo A. Perez III.
+
+## Captures
+
+Scripted synthetic scenario; defended policy blocks unsafe tools.
+
+![Generated report · deterministic local demonstration](docs/screenshots/desktop.webp)
+
+![Responsive interface at 390 pixels](docs/screenshots/mobile.webp)
+
+Full capture descriptions and provenance: [captures.json](docs/screenshots/captures.json).
