@@ -24,6 +24,28 @@ a collection of prompt examples.
 > RhinoGuard is defensive research software. Its filesystem, mail, HTTP,
 > memory, credentials, and shell are synthetic. It does not attack real systems.
 
+## One scenario, two enforcement modes
+
+The policy boundary is observable: monitor mode records an unsafe attempt, while defended mode can block it before the synthetic tool runs. Reports retain the evidence for comparison.
+
+```mermaid
+flowchart LR
+S["Scenario YAML<br/>synthetic fixtures"]:::source --> A["Model adapter<br/>scripted or configured LLM"]:::process
+    A --> P{"Policy preflight"}:::review
+    P -->|monitor| T["Synthetic tool sandbox"]:::process
+    P -->|enforce violation| B["Blocked result"]:::review
+    T --> D["Detectors and scoring"]:::process
+    B --> D
+    D --> R["Redacted evidence<br/>JSON · Markdown · HTML"]:::result
+    classDef source fill:#e0f2fe,stroke:#0284c7,color:#0c4a6e
+    classDef process fill:#ede9fe,stroke:#7c3aed,color:#3b0764
+    classDef store fill:#dcfce7,stroke:#16a34a,color:#14532d
+    classDef review fill:#fef3c7,stroke:#d97706,color:#78350f
+    classDef result fill:#f1f5f9,stroke:#475569,color:#0f172a
+```
+
+The [demo](#demo) uses the deterministic scripted adapter and needs no API key. Pair the generated HTML reports with the [security model](docs/security-model.md) when presenting the before/after result.
+
 ## Why RhinoGuard?
 
 Agentic systems can read files, call APIs, send messages, remember context, and
@@ -252,3 +274,13 @@ See the detailed [Roadmap](docs/roadmap.md).
 ## License
 
 [MIT](LICENSE) © 2026 Wilfredo Paulo A. Perez III.
+
+## Captures
+
+Scripted synthetic scenario; defended policy blocks unsafe tools.
+
+![Generated report · deterministic local demonstration](docs/screenshots/desktop.webp)
+
+![Responsive interface at 390 pixels](docs/screenshots/mobile.webp)
+
+Full capture descriptions and provenance: [captures.json](docs/screenshots/captures.json).

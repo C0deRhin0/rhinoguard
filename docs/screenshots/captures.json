@@ -1,0 +1,20 @@
+{
+  "project": "RhinoGuard",
+  "kind": "Generated report",
+  "note": "Scripted synthetic scenario; defended policy blocks unsafe tools.",
+  "capturedAt": "2026-10-23T05:41:24.413Z",
+  "screens": [
+    {
+      "file": "desktop.webp",
+      "caption": "Generated report · deterministic local demonstration",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "mobile.webp",
+      "caption": "Responsive interface at 390 pixels",
+      "width": 390,
+      "height": 844
+    }
+  ]
+}
